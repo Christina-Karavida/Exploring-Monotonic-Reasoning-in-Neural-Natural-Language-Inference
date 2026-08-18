@@ -68,10 +68,6 @@ Contains all the necessary functions to generate the dataset.
 
 ### `Dataset_Generation.ipynb`
 
-This noetbook
-
-### `Dataset_Generation.ipynb`
-
 This notebook can be used to reproduce all the data used in this thesis. Running the designated cells generates the complete MoRe dataset, as well as all experimental splits used in our experiments, including the Hyponym Generalization, Hyponym–Hypernym Generalization, Diagnostic, and Flipped Pattern splits. The generated data will be automatically  saved in the folder `data/`.
 
 ---
