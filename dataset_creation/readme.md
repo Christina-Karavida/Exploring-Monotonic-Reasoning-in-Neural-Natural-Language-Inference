@@ -1,6 +1,6 @@
 # MoRe Dataset Creation Pipeline
 
-This directory contains all code used to construct the ** Monotonicity Reasoning (MoRe)** dataset introduced in this thesis. 
+This directory contains the code necessary to generate Monotonicity Reasoning (MoRe) dataset introduced in this thesis. 
 
 ---
 
