@@ -1,10 +1,8 @@
-# MoRe Dataset Creation Pipeline
+# How to Generate the MoRe Dataset
 
-This directory contains the code used to construct the **Monotonicity Reasoning (MoRe) dataset** and generate the experimental splits used in this thesis.
+This directory contains the code used to construct the **Monotonicity Reasoning (MoRe) dataset** as well as generate the experimental splits used for the experiments of this thesis.
 
-The pipeline constructs the taxonomy, generates the natural language inference examples, and creates the experimental splits used to evaluate models under different generalization conditions.
-
-> **Note:** The generated datasets are not included in this repository due to their size. The data can be reproduced by running the provided generation code.
+> **Note:** The dataset and the experimental splits are not included in this repository due to their size. To generate MoRe and the experimental splits, run the designated cells in the `Dataset_Generation.ipynb` notebook. This will automatically generate all the data used in this work and save it in the `data/` folder.
 
 ---
 
@@ -29,8 +27,6 @@ dataset_creation/
     └── sentence_banks.py
 ```
 
-The `data/` directory is used as the output directory for the generated datasets and experimental splits.
-
 ---
 
 # 1. Taxonomy Construction
@@ -39,14 +35,13 @@ The taxonomy defines the hypernym–hyponym relations used to construct the MoRe
 
 ### `taxonomy.py`
 
-Contains the collection of hypernym–hyponym pairs used for dataset construction, organized into semantic categories.
+Contains the collection of hypernym–hyponym pairs used to create MoRe, organized in a taxonomy.
 
 ### `taxonomy_helpers.py`
 
 Contains helper functions for:
 
-* generating and processing hypernym–hyponym pairs;
-* inspecting category distributions;
+* generating hypernym–hyponym pairs;
 * visualizing the taxonomy; and
 * calculating taxonomy statistics.
 
@@ -56,40 +51,36 @@ A notebook for inspecting and analysing the taxonomy used in the dataset.
 
 ---
 
-# 2. Dataset Generation
 
-The dataset generation pipeline combines the taxonomy with sentence templates and logical rules to construct the MoRe examples.
+# 2. Dataset Generation
 
 ### `sentence_banks.py`
 
-Contains the sentence templates used to generate the dataset. The templates are organized according to the logical operators and patterns used in the MoRe dataset.
+Contains the sentence templates used to generate the dataset.
 
 ### `pluralization_helper.py`
 
-Contains helper functions for handling the pluralization of lexical items during dataset generation.
+Contains helper functions for handling the pluralization of hypernym pairs in the dataset generation phase.
 
 ### `dataset_generation.py`
 
-Contains the main dataset generation functions.
+Contains all the necessary functions to generate the dataset.
 
-The complete MoRe dataset, including the individual rule-specific datasets, is generated from this pipeline and saved under:
+### `Dataset_Generation.ipynb`
 
-```text
-data/more_dataset/
-```
+This noetbook
+
+### `Dataset_Generation.ipynb`
+
+This notebook can be used to reproduce all the data used in this thesis. Running the designated cells generates the complete MoRe dataset, as well as all experimental splits used in our experiments, including the Hyponym Generalization, Hyponym–Hypernym Generalization, Diagnostic, and Flipped Pattern splits. The generated data will be automatically  saved in the folder `data/`.
 
 ---
 
 # 3. Experimental Splits
 
-The generated MoRe dataset is further divided into experimental splits designed to test different forms of generalization.
-
 ### `experimental_splits.py`
 
-Contains the functions used to construct the experimental splits.
-
-The pipeline generates:
-
+Contains the functions used to construct MoRe's splits, namely:
 * **Hyponym Generalization**
 * **Hyponym–Hypernym Generalization**
 * **Hyponym Generalization – Diagnostic**
@@ -101,15 +92,11 @@ The resulting datasets are saved under:
 data/more_splits/
 ```
 
-### `Dataset_Generation.ipynb`
 
-Provides an executable walkthrough of the dataset generation process and the construction of the experimental splits.
-
----
 
 # 4. Reproducing the Dataset
 
-To reproduce the datasets, run the generation pipeline provided in `Dataset_Generation.ipynb`.
+To reproduce the datasets, run the cells of the `Dataset_Generation.ipynb`.
 
 The generated files will be written to the `data/` directory. In particular:
 
@@ -118,17 +105,5 @@ data/
 ├── more_dataset/
 └── more_splits/
 ```
-
-The notebook also performs checks on the generated splits to verify properties such as rule coverage and overlap between the relevant lexical items.
-
 ---
 
-## Output
-
-Running the pipeline produces:
-
-1. The complete MoRe dataset and the individual rule-specific datasets.
-2. The four experimental splits used in the thesis.
-3. The diagnostic version of the Hyponym Generalization split.
-
-The generated files are intentionally excluded from the repository and can be recreated using the code provided here.
