@@ -1,0 +1,44 @@
+model_name: "gpt2"
+learning_rate: 2e-5
+epochs: 1
+batch_size: 16
+gradient_accumulation_steps: 4
+eval_batch_size: 32
+max_tokens: 128
+manual_prepend_bos: true
+seed: 42
+max_grad_norm: 1.0
+warmup_steps: 1000
+
+exp_name: "more_classifier"
+wandb_name: "gpt_classifier"
+use_wandbid_name: true
+update_label_only: false
+num_workers: 2
+eval_every: 1
+use_hooked_transform: true
+save_model: true
+
+
+# To train and test on specific rules:
+# dataset: "more rules"
+# train_rules: e.g. ["R1"]
+# test_rules: e.g. ["R2"]
+
+# to train on splits: 
+# dataset:"more_split1"
+
+dataset: "split1_diagnostic"     
+sample_size: 0
+# train_rules: ["R1"]
+# test_rules: ["R5"]
+paths:
+  output_dir: "./results/gpt2_split1_diagnostic_test_results"
+  model_save_path: "gpt2_split1_diagnostic_test.pth"
+  results_save_path: "gpt2_split1_diagnostic_test_preds.json"
+  predictions_path: "gpt2_split1_diagnostic_test_preds.json"
+  
+  
+
+
+
