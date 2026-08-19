@@ -1,0 +1,2 @@
+data/snli_1.0/*.jsonl filter=lfs diff=lfs merge=lfs -text
+data/snli_1.0/*.txt filter=lfs diff=lfs merge=lfs -text
