@@ -9,7 +9,7 @@ Vrije Universiteit Amsterdam
 
 
 ## How to run the Code
-All experiments for this thesis were run using Google Colab Pro and are organised in scripts Jupyter notebooks and Python scripts.
+All experiments for this thesis were run using Google Colab Pro and are organised in  Jupyter notebooks and Python scripts.
 To use the code of this thesis:
 
 1. Create a folder in Google Drive named `thesis_code`.
