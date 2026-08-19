@@ -1,0 +1,36 @@
+batch_size: 16
+data_processing:
+  num_actors: 1
+  sentence_window_size: 2
+  shortcut_only_full: true
+  start_name_idx: 0
+  test_imbalance: 0.1
+  train_imbalance: 0.001
+  train_purity: 1.0
+  val_imbalance: 0.05
+dataset: monli
+epochs: 3
+eval_batch_size: 32
+eval_every: 1
+exp_name: snli_classifier
+gradient_accumulation_steps: 4
+learning_rate: 2.0e-05
+load_processed_data: false
+manual_prepend_bos: true
+max_tokens: 100
+model_name: gpt2
+num_workers: 2
+paths:
+  dataset_save_path: ./results/snli_classifier/processed_dataset.pkl
+  model_save_path: ./results/snli_classifier/gpt2_classifier.pth
+  output_dir: ./results/
+  results_save_path: ./results/snli_classifier/classification_results.json
+recreate_data: true
+sample_size: 0
+save_model: false
+save_processed_data: false
+seed: 42
+update_label_only: true
+use_hooked_transform: true
+use_wandbid_name: true
+wandb_name: gpt_classifier
