@@ -22,5 +22,4 @@ data/
     ├── snli_1.0_train.jsonl
     └── snli_1.0_train.txt
 
-
 The `snli_1.0/` directory is **not included in this repository**. To reproduce the experiments involving SNLI, download the **SNLI 1.0** dataset from the official [SNLI website](https://nlp.stanford.edu/projects/snli/), and place its contents in the`snli_1.0` folder that is inside this directory.
