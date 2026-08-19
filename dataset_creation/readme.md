@@ -2,7 +2,7 @@
 
 This directory contains the code used to construct the **Monotonicity Reasoning (MoRe) dataset** as well as generate the experimental splits used for the experiments of this thesis.
 
-> **Note:** The dataset and the experimental splits are not included in this repository due to their size. To generate MoRe and the experimental splits, run the designated cells in the `Dataset_Generation.ipynb` notebook. This will automatically generate all the data used in this work and save it in the `data/` folder.
+> **Note:** The dataset and the experimental splits are not included in this repository. To generate them, run the designated cells in the `Dataset_Generation.ipynb` notebook. This will automatically generate all the data used in this work and save it in the `data/` folder.
 
 ---
 
