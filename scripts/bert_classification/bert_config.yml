@@ -1,0 +1,46 @@
+# Instructions on how to use this config
+
+#For MoRe's splits:
+#   dataset: "more_split1"
+#   dataset: "more_split2"
+#   dataset: "more_split3"
+#   dataset: "split1_diagnostic"
+#
+
+
+# For experiments using selected rules:
+#   dataset: "more_rules"
+#
+# Specify the rules used for training and testing as lists.
+#   For example:
+#   train_rules: ["R1", "R4", "R5", "R7"]
+#   test_rules: ["R2", "R3", "R6", "R8"]
+#
+
+
+# dataset: more_split3
+dataset: "split1_diagnostic"    # 
+data_dir: /content/drive/MyDrive/thesis_code/data
+# split_name: split3
+model:
+  name: bert-base-uncased
+  max_length: 256
+  labels: ["neutral", "contradiction", "entailment"]
+
+training:
+  epochs: 1
+  batch_size: 8
+  eval_batch_size: 8
+  learning_rate: 0.00002
+  warmup_ratio: 0.1
+  weight_decay: 0.01
+  gradient_accumulation_steps: 1
+  fp16: true
+  seed: 42
+  disable_tqdm: false 
+
+paths:
+  output_dir: "./results/bert_split1_diagnostic"
+  model_dir: "bert_split1_diagnostic_mdl"
+  predictions_path: "bert_split1_diagnostic_preds.json"
+
