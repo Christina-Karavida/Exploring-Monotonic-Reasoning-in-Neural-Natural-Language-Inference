@@ -12,7 +12,7 @@ This directory contains the code used to construct the **Monotonicity Reasoning 
 dataset_creation/
 │
 ├── data/
-│   └── .gitkeep
+│   └── the folder where data are stored
 │
 ├── taxonomy/
 │   ├── taxonomy.py
@@ -29,25 +29,25 @@ dataset_creation/
 
 ---
 
-# 1. Taxonomy Construction
+# 1. Taxonomy 
 
 The taxonomy defines the hypernym–hyponym relations used to construct the MoRe examples.
 
 ### `taxonomy.py`
 
-Contains the collection of hypernym–hyponym pairs used to create MoRe, organized in a taxonomy.
+Contains the collection of hypernym–hyponym pairs.
 
 ### `taxonomy_helpers.py`
 
 Contains helper functions for:
 
 * generating hypernym–hyponym pairs;
-* visualizing the taxonomy; and
+* visualizing the taxonomy, and
 * calculating taxonomy statistics.
 
 ### `taxonomy_stats.ipynb`
 
-A notebook for inspecting and analysing the taxonomy used in the dataset.
+A notebook for inspecting the taxonomy.
 
 ---
 
@@ -68,7 +68,7 @@ Contains all the necessary functions to generate the dataset.
 
 ### `Dataset_Generation.ipynb`
 
-This notebook can be used to reproduce all the data used in this thesis. Running the designated cells generates the complete MoRe dataset, as well as all experimental splits used in our experiments, including the Hyponym Generalization, Hyponym–Hypernym Generalization, Diagnostic, and Flipped Pattern splits. The generated data will be automatically  saved in the folder `data/`.
+This notebook can be used to reproduce all the data used in this thesis. Running the designated cells generates the complete MoRe dataset, as well as all experimental splits, including the Hyponym Generalization, Hyponym–Hypernym Generalization, Diagnostic, and Flipped Pattern. The generated data will be automatically  saved in the folder `data/`.
 
 ---
 
@@ -76,7 +76,7 @@ This notebook can be used to reproduce all the data used in this thesis. Running
 
 ### `experimental_splits.py`
 
-Contains the functions used to construct MoRe's splits, namely:
+Includes the functions used to construct MoRe's splits, namely:
 * **Hyponym Generalization**
 * **Hyponym–Hypernym Generalization**
 * **Hyponym Generalization – Diagnostic**
