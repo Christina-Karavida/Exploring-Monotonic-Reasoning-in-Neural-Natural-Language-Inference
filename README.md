@@ -2,8 +2,11 @@
 This repository contains the code for the Master’s thesis submitted as part of the ReMA Humanities (Human Language Technology) programme at VU Amsterdam.
 
 Christina Karavida
+
 August 2026
+
 Vrije Universiteit Amsterdam
+
 
 ## How to run the Code
 All experiments for this thesis were run using Google Colab Pro and are organised in scripts Jupyter notebooks and Python scripts.
